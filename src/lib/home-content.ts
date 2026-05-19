@@ -8,7 +8,7 @@ import type { CTABannerCopy } from '@/components/sections/CTABanner';
 import type { Locale } from './i18n';
 
 const SIGNUP_HREF = 'https://app.nukipa.com/signup';
-const SALES_HREF  = 'mailto:hello@nukipa.com?subject=Talk%20to%20Sales';
+const SALES_HREF  = 'mailto:contact@nukipalabs.com?subject=Talk%20to%20Sales';
 
 export interface HomeContent {
   hero:            HeroCopy;

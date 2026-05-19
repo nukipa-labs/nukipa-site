@@ -25,9 +25,9 @@ export default function PrivacyPage() {
       <p>The controller under the EU General Data Protection Regulation (GDPR) is:</p>
       <p>
         Nukipa Labs GmbH<br />
-        [FILL IN: street address]<br />
-        [FILL IN: ZIP] Munich, Germany<br />
-        Privacy email: [FILL IN: privacy email, e.g. privacy@nukipa.com]
+        Gunta-Stölzl-Straße 7<br />
+        80807 Munich, Germany<br />
+        Privacy email: contact@nukipalabs.com
       </p>
       <p>
         We have not appointed a statutory data-protection officer. You can
@@ -150,9 +150,9 @@ export default function PrivacyPage() {
 
       <p style={{ marginTop: '2rem', fontStyle: 'italic' }}>
         For privacy questions, email{' '}
-        [FILL IN: privacy email, e.g. privacy@nukipa.com].
+        contact@nukipalabs.com.
         <br />
-        Last updated: 18 May 2026.
+        Last updated: 19 May 2026.
       </p>
     </LegalShell>
   );

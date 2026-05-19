@@ -27,9 +27,9 @@ export default function DatenschutzPage() {
       </p>
       <p>
         Nukipa Labs GmbH<br />
-        [FILL IN: Straße und Hausnummer]<br />
-        [FILL IN: PLZ] München, Deutschland<br />
-        E-Mail Datenschutz: [FILL IN: Datenschutz-Mailadresse, z. B. datenschutz@nukipa.com]
+        Gunta-Stölzl-Straße 7<br />
+        80807 München, Deutschland<br />
+        E-Mail Datenschutz: contact@nukipalabs.com
       </p>
       <p>
         Wir haben keinen gesetzlich vorgeschriebenen Datenschutzbeauftragten
@@ -166,9 +166,9 @@ export default function DatenschutzPage() {
 
       <p style={{ marginTop: '2rem', fontStyle: 'italic' }}>
         Bei Fragen zum Datenschutz schreib uns an{' '}
-        [FILL IN: Datenschutz-Mailadresse, z. B. datenschutz@nukipa.com].
+        contact@nukipalabs.com.
         <br />
-        Stand: 18. Mai 2026.
+        Stand: 19. Mai 2026.
       </p>
     </LegalShell>
   );

@@ -80,21 +80,22 @@ export default function AgbPage() {
       </p>
       <ul>
         <li>
-          Bei monatlicher Abrechnung kann der Vertrag mit einer Frist von{' '}
-          [FILL IN: z. B. 30 Tagen zum Monatsende] in Textform gekündigt werden.
+          Bei monatlicher Abrechnung kann der Vertrag mit einer Frist von
+          mindestens 10 Werktagen vor dem nächsten Abrechnungszeitraum in
+          Textform gekündigt werden.
         </li>
         <li>
-          Bei jährlicher Abrechnung kann der Vertrag mit einer Frist von{' '}
-          [FILL IN: z. B. 90 Tagen zum Ende des jeweiligen Vertragsjahres] in
-          Textform gekündigt werden.
+          Bei jährlicher Abrechnung kann der Vertrag mit einer Frist von
+          mindestens 10 Werktagen vor dem nächsten Abrechnungszeitraum in
+          Textform gekündigt werden. Es findet keine automatische
+          Verlängerung über die vereinbarte Jahreslaufzeit hinaus statt.
         </li>
       </ul>
       <p>
         Das Recht beider Parteien zur außerordentlichen Kündigung aus wichtigem
         Grund bleibt unberührt. Nach Vertragsende werden die im Account
-        gespeicherten Inhalte für [FILL IN: z. B. 30 Tage] in einem
-        Lese-Zugang bereitgehalten und danach gelöscht, soweit gesetzliche
-        Aufbewahrungspflichten nicht entgegenstehen.
+        gespeicherten Inhalte für 365 Tage bereitgehalten und danach gelöscht,
+        soweit gesetzliche Aufbewahrungspflichten nicht entgegenstehen.
       </p>
 
       <h2>§ 6 Pflichten des Kunden</h2>
@@ -159,9 +160,9 @@ export default function AgbPage() {
 
       <p style={{ marginTop: '2rem', fontStyle: 'italic' }}>
         Bei Rückfragen zu diesen AGB schreib uns an{' '}
-        [FILL IN: legal-Mailadresse, z. B. legal@nukipa.com].
+        contact@nukipalabs.com.
         <br />
-        Stand: 18. Mai 2026.
+        Stand: 19. Mai 2026.
       </p>
     </LegalShell>
   );

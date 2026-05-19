@@ -20,49 +20,39 @@ export default function ImpressumPage() {
       <h2>Angaben gemäß § 5 TMG</h2>
       <p>
         Nukipa Labs GmbH<br />
-        [FILL IN: Straße und Hausnummer]<br />
-        [FILL IN: PLZ] München<br />
+        Gunta-Stölzl-Straße 7<br />
+        80807 München<br />
         Deutschland
       </p>
 
       <h2>Vertreten durch</h2>
       <p>
-        Geschäftsführer: [FILL IN: Vor- und Nachname(n) aller im
-        Handelsregister eingetragenen Geschäftsführer]
-      </p>
-      <p>
-        <em>
-          Hinweis für die Redaktion: § 5 TMG verlangt die namentliche Nennung
-          aller Vertretungsberechtigten. Diese Pflicht besteht unabhängig von
-          der Marketing-Außendarstellung. Eine pauschale Bezeichnung ("das
-          Gründerteam") ist hier nicht ausreichend.
-        </em>
+        Geschäftsführer: Fabien Nestmann, Steffen Iwan
       </p>
 
       <h2>Kontakt</h2>
       <p>
-        Telefon: [FILL IN: Telefonnummer]<br />
-        E-Mail: [FILL IN: Kontakt-Mailadresse, z. B. hallo@nukipa.com]
+        E-Mail: contact@nukipalabs.com
       </p>
 
       <h2>Registereintrag</h2>
       <p>
         Eintragung im Handelsregister<br />
         Registergericht: Amtsgericht München<br />
-        Registernummer: HRB [FILL IN: HRB-Nummer]
+        Registernummer: HRB 301802
       </p>
 
       <h2>Umsatzsteuer-ID</h2>
       <p>
         Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-        [FILL IN: USt-IdNr, z. B. DE123456789]
+        DE456506273
       </p>
 
       <h2>Redaktionell verantwortlich (§ 18 Abs. 2 MStV)</h2>
       <p>
         Für die journalistisch-redaktionellen Inhalte auf nukipa.com
         (insbesondere den Blog) verantwortlich:<br />
-        [FILL IN: Vor- und Nachname], Anschrift wie oben.
+        Fabien Nestmann, Steffen Iwan, Anschrift wie oben.
       </p>
 
       <h2>Streitschlichtung</h2>
@@ -136,11 +126,11 @@ export default function ImpressumPage() {
       <h2>Kontakt bei Rechtsfragen</h2>
       <p>
         Für rechtliche Anfragen schreib uns an{' '}
-        [FILL IN: legal-Mailadresse, z. B. legal@nukipa.com].
+        contact@nukipalabs.com.
       </p>
 
       <p style={{ marginTop: '2rem', fontStyle: 'italic' }}>
-        Stand: 18. Mai 2026
+        Stand: 19. Mai 2026
       </p>
     </LegalShell>
   );

@@ -4,7 +4,7 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 
 const SIGNUP_HREF = 'https://app.nukipa.com/signup';
-const SALES_HREF  = 'mailto:hello@nukipa.com?subject=Nukipa%20Pro%20%E2%80%93%20Sales';
+const SALES_HREF  = 'mailto:contact@nukipalabs.com?subject=Nukipa%20Pro%20%E2%80%93%20Sales';
 
 export const metadata: Metadata = {
   title:       'Pricing',

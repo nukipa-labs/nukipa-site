@@ -74,7 +74,7 @@ export default function UeberUnsPage() {
                 Wo wir sitzen
               </h2>
               <p className="mt-4">
-                München. Wir lieben die Mischung aus DAX-Mittelstand vor der Tür und einer wachsenden KI-Szene direkt nebenan. Wenn du in der Nähe bist und auf einen Espresso vorbeikommen willst: <a href="mailto:hello@nukipa.com" className="link-underline text-[color:var(--brand-primary)]">hello@nukipa.com</a>.
+                München. Wir lieben die Mischung aus DAX-Mittelstand vor der Tür und einer wachsenden KI-Szene direkt nebenan. Wenn du in der Nähe bist und auf einen Espresso vorbeikommen willst: <a href="mailto:contact@nukipalabs.com" className="link-underline text-[color:var(--brand-primary)]">contact@nukipalabs.com</a>.
               </p>
             </section>
           </div>

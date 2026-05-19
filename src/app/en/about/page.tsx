@@ -74,7 +74,7 @@ export default function AboutPage() {
                 Where we sit
               </h2>
               <p className="mt-4">
-                Munich. We love the mix of DAX-scale Mittelstand on our doorstep and a growing AI scene right next door. If you are in town and want to grab an espresso: <a href="mailto:hello@nukipa.com" className="link-underline text-[color:var(--brand-primary)]">hello@nukipa.com</a>.
+                Munich. We love the mix of DAX-scale Mittelstand on our doorstep and a growing AI scene right next door. If you are in town and want to grab an espresso: <a href="mailto:contact@nukipalabs.com" className="link-underline text-[color:var(--brand-primary)]">contact@nukipalabs.com</a>.
               </p>
             </section>
           </div>

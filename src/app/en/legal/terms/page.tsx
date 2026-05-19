@@ -76,20 +76,22 @@ export default function TermsPage() {
       </p>
       <ul>
         <li>
-          For monthly billing, the contract may be terminated in text form on
-          [FILL IN: e.g. 30 days' notice to the end of the calendar month].
+          For monthly billing, the contract may be terminated in text form
+          with at least 10 business days' notice before the next billing
+          period.
         </li>
         <li>
-          For annual billing, the contract may be terminated in text form on
-          [FILL IN: e.g. 90 days' notice to the end of the current contract
-          year].
+          For annual billing, the contract may be terminated in text form
+          with at least 10 business days' notice before the next billing
+          period. The contract does not auto-renew beyond the agreed annual
+          term.
         </li>
       </ul>
       <p>
         Both parties' right to terminate for cause remains unaffected. After
         the contract ends, the content stored in the account remains available
-        in read-only mode for [FILL IN: e.g. 30 days] and is then deleted,
-        except where statutory retention rules apply.
+        for 365 days and is then deleted, except where statutory retention
+        rules apply.
       </p>
 
       <h2>§ 6 Customer obligations</h2>
@@ -155,9 +157,9 @@ export default function TermsPage() {
 
       <p style={{ marginTop: '2rem', fontStyle: 'italic' }}>
         For questions about these terms, email{' '}
-        [FILL IN: legal email, e.g. legal@nukipa.com].
+        contact@nukipalabs.com.
         <br />
-        Last updated: 18 May 2026.
+        Last updated: 19 May 2026.
       </p>
     </LegalShell>
   );

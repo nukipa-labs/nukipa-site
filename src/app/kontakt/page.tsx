@@ -44,13 +44,13 @@ export default function KontaktPage() {
                 submitting: 'Wird gesendet...',
                 success: {
                   title: 'Danke, wir haben deine Nachricht.',
-                  body:  'Du hörst meist innerhalb eines Werktags von uns. Bei wirklich dringenden Themen schreib uns einfach direkt an hello@nukipa.com.'
+                  body:  'Du hörst meist innerhalb eines Werktags von uns. Bei wirklich dringenden Themen schreib uns einfach direkt an contact@nukipalabs.com.'
                 },
                 errors: {
                   missingRequired: 'Bitte fülle Name, E-Mail und Nachricht aus.',
                   generic:         'Das hat leider nicht geklappt. Versuche es nochmal oder schreib uns direkt eine E-Mail.'
                 },
-                fallbackEmail: 'hello@nukipa.com'
+                fallbackEmail: 'contact@nukipalabs.com'
               }}
             />
           </div>
