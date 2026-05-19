@@ -1,0 +1,400 @@
+@import "tailwindcss";
+
+/* ============================================================================
+   Brand tokens (Nukipa) - locked from production nukipa.com.
+   Off-white surface override per anti-patterns §3; pure-white usage limited
+   to glassmorphism nav, cards (for elevation against tinted page bg) and
+   on-brand text. See DESIGN.md for the full rationale.
+   ========================================================================== */
+:root {
+  /* Brand cobalt */
+  --brand-primary:        #0054C9;
+  --brand-primary-dark:   #003B8E;
+  --brand-accent:         #4D94FF;
+  --brand-glow:           rgba(0, 84, 201, 0.30);
+  --brand-shadow:         rgba(0, 84, 201, 0.25);
+  --brand-shadow-soft:    rgba(0, 84, 201, 0.08);
+
+  /* Surfaces */
+  --surface-page:         #FBFBFD;
+  --surface-soft:         #F7F9FF;
+  --surface-card:         #FFFFFF;
+  --surface-tint:         #E8EEFF;
+  --surface-nav-scrolled: rgba(255, 255, 255, 0.85);
+
+  /* Borders */
+  --border-default:       #E2E8F0;
+  --border-subtle:        rgba(0, 0, 0, 0.04);
+
+  /* Text */
+  --text-primary:         #1F2732;
+  --text-secondary:       #475569;
+  --text-muted:           #94A3B8;
+  --text-on-brand:        #FFFFFF;
+
+  /* Semantic */
+  --success:              #10B981;
+  --warning:              #F59E0B;
+
+  /* Mapped names so wow-effects snippets work as-is */
+  --color-bg:              var(--surface-page);
+  --color-fg:              var(--text-primary);
+  --color-muted:           var(--text-secondary);
+  --color-accent:          var(--brand-primary);
+  --color-border:          var(--border-default);
+  --color-surface:         var(--surface-soft);
+  --color-primary:         var(--brand-primary);
+  --color-primary-dark:    var(--brand-primary-dark);
+  --color-accent-blue:     var(--brand-accent);
+  --accent-glow:           var(--brand-glow);
+  --color-primary-shadow:  var(--brand-shadow);
+
+  /* Radii */
+  --radius-card:    14px;
+  --radius-btn:     10px;
+  --radius-pill:    9999px;
+
+  /* Shadows */
+  --shadow-soft:    0 4px 12px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-elevated:0 12px 32px -8px rgba(15, 23, 42, 0.12), 0 4px 8px rgba(15, 23, 42, 0.04);
+
+  /* Motion tokens */
+  --ease-out-expo:  cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out:    cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast:    200ms;
+  --duration-base:    300ms;
+  --duration-slow:    700ms;
+  --duration-glacial: 10s;
+
+  /* Typography fallbacks (next/font injects --font-instrument-* on <html>) */
+  --font-display: var(--font-instrument-serif), Georgia, "Times New Roman", serif;
+  --font-sans:    var(--font-instrument-sans),  system-ui, -apple-system, sans-serif;
+}
+
+/* ============================================================================
+   Tailwind v4 @theme - exposes brand tokens as Tailwind utilities
+   (bg-brand, text-text-primary, font-display, rounded-card ...).
+   ========================================================================== */
+@theme {
+  --color-brand:            #0054C9;
+  --color-brand-dark:       #003B8E;
+  --color-brand-accent:     #4D94FF;
+  --color-surface-page:     #FBFBFD;
+  --color-surface-soft:     #F7F9FF;
+  --color-surface-card:     #FFFFFF;
+  --color-surface-tint:     #E8EEFF;
+  --color-border-default:   #E2E8F0;
+  --color-text-primary:     #1F2732;
+  --color-text-secondary:   #475569;
+  --color-text-muted:       #94A3B8;
+  --color-success:          #10B981;
+
+  --font-display: var(--font-instrument-serif), Georgia, "Times New Roman", serif;
+  --font-sans:    var(--font-instrument-sans),  system-ui, -apple-system, sans-serif;
+
+  --radius-card:  14px;
+  --radius-btn:   10px;
+  --radius-pill:  9999px;
+}
+
+/* ============================================================================
+   Base typography
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px; /* clear the sticky glass nav on anchor jumps */
+}
+
+html, body {
+  background: var(--surface-page);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.serif, em.editorial, .editorial-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Italic <em> inside headings defaults to editorial serif. Authors can opt
+   out with .not-editorial if they ever need a plain italic. */
+h1 em, h2 em, h3 em {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* ============================================================================
+   Buttons
+   ========================================================================== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  min-height: 44px;
+  background: var(--brand-primary);
+  color: var(--text-on-brand);
+  border: 1px solid var(--brand-primary);
+  border-radius: var(--radius-btn);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.005em;
+  box-shadow: 0 1px 2px rgba(0, 84, 201, 0.12);
+  cursor: pointer;
+  transition:
+    transform 200ms var(--ease-out-expo),
+    box-shadow 200ms var(--ease-out-expo),
+    background-color 200ms var(--ease-out-expo);
+  text-decoration: none;
+}
+
+.btn-primary.btn-compact {
+  padding: 0.625rem 1.25rem;
+  font-size: 14px;
+  min-height: 38px;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  min-height: 44px;
+  background: transparent;
+  color: var(--brand-primary);
+  border: 1.5px solid var(--brand-primary);
+  border-radius: var(--radius-btn);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.005em;
+  cursor: pointer;
+  transition:
+    transform 200ms var(--ease-out-expo),
+    background-color 200ms var(--ease-out-expo),
+    border-color 200ms var(--ease-out-expo);
+  text-decoration: none;
+}
+
+.btn-primary:active,
+.btn-secondary:active { transform: translateY(0) scale(0.98); }
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px -6px var(--brand-shadow);
+    background: var(--brand-primary-dark);
+    border-color: var(--brand-primary-dark);
+  }
+  .btn-secondary:hover {
+    background: var(--surface-tint);
+    border-color: var(--brand-primary-dark);
+  }
+}
+
+/* Animated-underline link (Effect 7) */
+.link-underline {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: currentColor;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1.5px;
+  width: 0;
+  background: currentColor;
+  transition: width 250ms var(--ease-out-expo);
+}
+@media (hover: hover) and (pointer: fine) {
+  .link-underline:hover::after { width: 100%; }
+}
+
+/* ============================================================================
+   Cards
+   ========================================================================== */
+.card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card);
+  padding: 1.75rem;
+  transition:
+    border-color 300ms var(--ease-out-expo),
+    box-shadow 300ms var(--ease-out-expo),
+    transform 300ms var(--ease-out-expo);
+}
+@media (min-width: 1024px) {
+  .card { padding: 2rem; }
+}
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    border-color: rgba(0, 84, 201, 0.20);
+    box-shadow: 0 12px 40px -8px var(--brand-shadow-soft);
+    transform: translateY(-3px);
+  }
+}
+
+/* ============================================================================
+   Hero ambient orb (Effect 4)
+   ========================================================================== */
+.hero-glow {
+  position: relative;
+  isolation: isolate;
+}
+.hero-glow::before {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(ellipse 60% 40% at 50% 50%, var(--brand-glow), transparent 70%);
+  animation: glow-drift var(--duration-glacial) ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(20px);
+}
+@keyframes glow-drift {
+  0%, 100% { transform: translate(0, 0) scale(1);     opacity: 0.6; }
+  33%      { transform: translate(3%, -5%) scale(1.05); opacity: 0.8; }
+  66%      { transform: translate(-3%, 5%) scale(0.95); opacity: 0.5; }
+}
+
+/* CTA banner uses the same orb pattern but white-on-cobalt */
+.hero-glow.hero-glow-on-brand {
+  --brand-glow: rgba(255, 255, 255, 0.25);
+}
+
+/* ============================================================================
+   Scroll reveals (Effect 2)
+   ========================================================================== */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity var(--duration-slow) var(--ease-out-expo),
+    transform var(--duration-slow) var(--ease-out-expo);
+  will-change: opacity, transform;
+}
+[data-reveal].revealed {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ============================================================================
+   Noise texture overlay (Effect 5)
+   ========================================================================== */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ============================================================================
+   Navbar - glassmorphism on scroll (Effect 3)
+   ========================================================================== */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color 400ms var(--ease-in-out),
+    backdrop-filter 400ms var(--ease-in-out),
+    box-shadow 400ms var(--ease-in-out),
+    border-color 400ms var(--ease-in-out);
+}
+.site-nav.is-scrolled {
+  background: var(--surface-nav-scrolled);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom-color: var(--border-subtle);
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.06),
+    0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* ============================================================================
+   Reduced-motion overrides (motion.md §3)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow::before {
+    animation: none !important;
+    opacity: 0.6 !important;
+    transform: none !important;
+  }
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================================
+   Long-form post body rhythm - used by <PostBody> on /blog/[slug].
+   DO NOT modify selectors; blog merger depends on them.
+   ========================================================================== */
+.prose-body {
+  max-width: 70ch;
+  line-height: 1.7;
+}
+.prose-body h1, .prose-body h2, .prose-body h3 {
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+.prose-body h1 { font-size: 2rem; }
+.prose-body h2 { font-size: 1.5rem; }
+.prose-body h3 { font-size: 1.25rem; }
+.prose-body p  { margin: 0 0 1em; }
+.prose-body a  { color: var(--brand-primary); text-decoration: underline; }
+.prose-body code {
+  background: #f1f5f9;
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+.prose-body pre {
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+.prose-body pre code { background: transparent; padding: 0; }
+.prose-body img { border-radius: 8px; margin: 1.5em 0; }
+.prose-body blockquote {
+  border-left: 3px solid var(--border-default);
+  padding-left: 1em;
+  color: var(--text-secondary);
+  margin: 1em 0;
+}
+.prose-body ul, .prose-body ol { padding-left: 1.5em; margin: 0 0 1em; }
+.prose-body li { margin: 0.25em 0; }
